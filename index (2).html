@@ -30,22 +30,19 @@
       pointer-events:none;
     }
     .glass{backdrop-filter:saturate(140%) blur(10px); background:linear-gradient(135deg, rgba(124,58,237,.18), rgba(34,211,238,.12));}
-    .tick:before{content:"✓"; display:inline-block; margin-left:.5rem}
     .rtl-flip{transform:scaleX(-1)}
   </style>
 </head>
 <body class="text-gray-100 tech-bg">
 
-  <!-- Navbar -->
   <header class="sticky top-0 z-50 bg-[#0b1220]/80 glass border-b border-white/5">
     <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-3">
       <a href="#" class="flex items-center gap-2">
-        <img src="assets/logo.png" alt="Logo" class="h-9 w-9 rounded-full ring-2 ring-white/10">
+        <img src="logo.png" onerror="this.style.display='none'" alt="Logo" class="h-9 w-9 rounded-full ring-2 ring-white/10">
         <span class="font-extrabold text-lg">Mr Presentation</span>
       </a>
       <nav class="ms-auto hidden md:flex items-center gap-6 text-sm">
         <a href="#services" class="hover:text-white">الخدمات</a>
-        <a href="#portfolio" class="hover:text-white">أعمالنا</a>
         <a href="#pricing"  class="hover:text-white">الباقات</a>
         <a href="#faq"      class="hover:text-white">الأسئلة</a>
       </nav>
@@ -56,86 +53,29 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="relative">
     <div class="relative max-w-7xl mx-auto px-4 py-16 sm:py-24 grid md:grid-cols-2 gap-10 items-center">
       <div>
         <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">
           نسوّي لك <span class="text-transparent bg-clip-text bg-gradient-to-br from-violet-400 to-cyan-300">عرض باوربوينت يبيض الوجه</span> ويشد الدكاترة والزملاء
         </h1>
-        <p class="mt-4 text-gray-300 text-lg">
-          نخدم الخليج والسعودية ومصر — صياغة مرتبة، تصميم احترافي، إنفوجرافيك، وتسليم سريع.
-        </p>
+        <p class="mt-4 text-gray-300 text-lg">نخدم الخليج والسعودية ومصر — صياغة مرتبة، تصميم احترافي، إنفوجرافيك، وتسليم سريع.</p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="#pricing" class="rounded-xl bg-white text-gray-900 px-5 py-3 font-bold">شوف الباقات</a>
-          <a href="tel:01141965776" class="rounded-xl bg-white/10 border border-white/10 px-5 py-3">اتصل الآن</a>
           <a href="https://www.tiktok.com/@mr_presentation" target="_blank" class="rounded-xl bg-white/10 border border-white/10 px-5 py-3">تيك توك</a>
         </div>
-        <div class="mt-6 flex flex-wrap items-center gap-6 text-sm text-gray-300">
-          <div class="flex items-center gap-2"><span class="font-bold text-white">+500</span> مشروع مكتمل</div>
-          <div class="flex items-center gap-2"><span class="font-bold text-white">تسليم</span> خلال 24–72 ساعة</div>
-          <div class="flex items-center gap-2"><span class="font-bold text-white">تعديلات</span> مجانًا ضمن الباقة</div>
-        </div>
       </div>
-
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-3">
+<div class="rounded-2xl border border-white/10 bg-white/5 p-3">
         <div class="aspect-[9/16] w-full rounded-xl overflow-hidden bg-black/60 flex items-center justify-center">
-          <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-            <source src="assets/work.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
+          <video controls playsinline preload="metadata" class="w-full h-full object-cover" onerror="this.closest('.rounded-2xl').style.display='none'">
+            <source src="work.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="text-xs text-gray-400 mt-2">مقطع من أعمالنا — نبدله بأي فيديو تختاره.</p>
+        <p class="text-xs text-gray-400 mt-2">لو ما ظهر الفيديو، سيب الاسم بالضبط work.mp4 وارفعه في جذر الريبو.</p>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="py-16 border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-2xl sm:text-3xl font-extrabold mb-8">خدماتنا</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="group border border-white/10 rounded-2xl p-6 bg-white/5 hover:bg-white/10 transition">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-violet-600/20 text-violet-300">🎯</span>
-            <h3 class="font-bold">تصميم عروض PowerPoint</h3>
-          </div>
-          <p class="text-gray-300">ستايل نظيف، خطوط واضحة، وانتقالات خفيفة — العرض يطلع أنيق ومباشر.</p>
-          <ul class="mt-4 space-y-2 text-sm text-gray-300">
-            <li class="tick">صياغة ولغة مضبوطة</li>
-            <li class="tick">ألوان وهوية متناسقة</li>
-            <li class="tick">تسليم PPT / PDF / Video</li>
-          </ul>
-        </div>
-        <div class="group border border-white/10 rounded-2xl p-6 bg-white/5 hover:bg-white/10 transition">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-400/20 text-cyan-300">📑</span>
-            <h3 class="font-bold">تنسيق بحوث وتقارير</h3>
-          </div>
-          <p class="text-gray-300">تنسيق أكاديمي مضبوط — عناوين، مراجع، فهارس، وإنفوجرافيك مختصر.</p>
-          <ul class="mt-4 space-y-2 text-sm text-gray-300">
-            <li class="tick">تحويل البحث لشرائح</li>
-            <li class="tick">رسوم ومخططات</li>
-            <li class="tick">تسليم سريع</li>
-          </ul>
-        </div>
-        <div class="group border border-white/10 rounded-2xl p-6 bg-white/5 hover:bg-white/10 transition">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-300">🧾</span>
-            <h3 class="font-bold">سِيَر ذاتية</h3>
-          </div>
-          <p class="text-gray-300">CV بسيط ومرتب يبرز نقاط قوتك — متوافق مع أنظمة الفرز (ATS).</p>
-          <ul class="mt-4 space-y-2 text-sm text-gray-300">
-            <li class="tick">تصميم مهني</li>
-            <li class="tick">Word + PDF</li>
-            <li class="tick">ملاحظات لتحسين البروفايل</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing -->
   <section id="pricing" class="py-16 bg-white/5 border-y border-white/5">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-2xl sm:text-3xl font-extrabold mb-8">الباقات</h2>
@@ -144,11 +84,6 @@
           <h3 class="font-extrabold text-lg mb-2">Basic</h3>
           <p class="text-gray-300 mb-4">حتى 10 شرائح | تصميم أنيق بسيط</p>
           <div class="text-3xl font-extrabold mb-4">SAR <span>95</span></div>
-          <ul class="space-y-2 text-sm text-gray-300 mb-6">
-            <li class="tick">قالب موحد وألوان متناسقة</li>
-            <li class="tick">تعديل واحد مجاني</li>
-            <li class="tick">تسليم خلال 48–72 ساعة</li>
-          </ul>
           <a href="https://wa.me/201141965776" class="w-full inline-flex justify-center rounded-xl bg-white text-gray-900 px-4 py-2 font-bold">اطلب الآن</a>
         </div>
         <div class="rounded-2xl border-2 border-violet-500/50 bg-gradient-to-br from-violet-600/20 to-cyan-400/10 p-6">
@@ -156,46 +91,27 @@
           <h3 class="font-extrabold text-lg mb-2">Premium</h3>
           <p class="text-gray-200 mb-4">حتى 25 شريحة | إنفوجرافيك وانتقالات</p>
           <div class="text-3xl font-extrabold mb-4">SAR <span>225</span></div>
-          <ul class="space-y-2 text-sm text-gray-100 mb-6">
-            <li class="tick">تحرير لغوي وإعادة صياغة</li>
-            <li class="tick">مخططات ورسوم</li>
-            <li class="tick">تعديلان مجانيان</li>
-          </ul>
           <a href="https://wa.me/201141965776" class="w-full inline-flex justify-center rounded-xl bg-gradient-to-br from-violet-600 to-cyan-400 px-4 py-2 font-bold">احجز الآن</a>
         </div>
         <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
           <h3 class="font-extrabold text-lg mb-2">VIP</h3>
           <p class="text-gray-300 mb-4">حتى 50 شريحة | كتابة نصوص + فيديو تصدير</p>
           <div class="text-3xl font-extrabold mb-4">SAR <span>490</span></div>
-          <ul class="space-y-2 text-sm text-gray-300 mb-6">
-            <li class="tick">جلسة توجيه</li>
-            <li class="tick">3 تعديلات + تسليم سريع</li>
-            <li class="tick">هوية لونية مخصصة</li>
-          </ul>
           <a href="https://wa.me/201141965776" class="w-full inline-flex justify-center rounded-xl bg-white text-gray-900 px-4 py-2 font-bold">تواصل</a>
         </div>
       </div>
-      <p class="mt-4 text-xs text-gray-400">الأسعار إرشادية — نعدّلها حسب متطلباتك وبالعملة المناسبة.</p>
     </div>
   </section>
 
-  <!-- FAQ -->
   <section id="faq" class="py-16">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-2xl sm:text-3xl font-extrabold mb-8">الأسئلة المتكررة</h2>
+      <h2 class="text-2xl sm:text-3xl font-extrabولد mb-8">الأسئلة المتكررة</h2>
       <details class="group rounded-xl border border-white/10 bg-white/5 p-4">
         <summary class="cursor-pointer marker:hidden flex items-center justify-between">
           <span class="font-bold">التسليم كم يحتاج وقت؟</span>
           <span class="transition rtl-flip group-open:rotate-180">▼</span>
         </summary>
         <p class="mt-2 text-gray-300">غالبًا 24–72 ساعة حسب حجم المحتوى.</p>
-      </details>
-      <details class="group rounded-xl border border-white/10 bg-white/5 p-4 mt-3">
-        <summary class="cursor-pointer marker:hidden flex items-center justify-between">
-          <span class="font-bold">هل فيه تعديلات مجانية؟</span>
-          <span class="transition rtl-flip group-open:rotate-180">▼</span>
-        </summary>
-        <p class="mt-2 text-gray-300">نعم — حسب الباقة. ولو احتجت أكثر نعطيك سعر رمزي.</p>
       </details>
     </div>
   </section>
